@@ -1,0 +1,6 @@
+---
+title: "Base R- Weekly Assignment #1"
+author: "Amanda Mae Woodward"
+date: "2022-09-28"
+output: html_document
+---
