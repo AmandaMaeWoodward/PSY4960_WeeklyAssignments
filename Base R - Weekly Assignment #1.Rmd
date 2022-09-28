@@ -4,3 +4,24 @@ author: "Amanda Mae Woodward"
 date: "2022-09-28"
 output: html_document
 ---
+
+1. Name the four panels in R Studio and offer a brief description of each.
+
+2. Create a code chunk. Write your favorite number in it. 
+
+3. Add thirty-seven to six
+
+4. evaluate the following: six times four is equal to twenty-four
+
+5. What's the difference between an "and" and an "or" statement? 
+
+6. Create an "and" statement for the following sentence: three is less than five and tree is the same as oak. 
+
+7. Create a variable called "dinner" that contains your favorite thing to eat for dinner. 
+
+8. write out all numbers between 50 and 200
+
+9. print every odd number between 1 and 300. 
+
+10. repeat the phrase "i'm excited for fall" five times
+
