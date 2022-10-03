@@ -1,0 +1,26 @@
+---
+title: "Base R- Weekly Assignment #2"
+author: "Amanda Mae Woodward"
+date: "2022-10-03"
+output: html_document
+---
+# Set Up
+1. Load the tidyverse library
+2. Load the billboard data. 
+3. What type of data is this? (e.g. describe what's in the dataset.)
+4. Print the column names from this dataset. 
+5. Print the first 5 entries in the dataset. 
+
+# Practice
+1. Create a subset of data that has Jay-Z as the only artist. How many songs are in it?
+2. In the original dataset, use filter to find information about the song "All the small things." What was the highest position this song reached on the billboard 100? 
+3. Create a subset of data for songs Tim McGraw sang. Summarize the data for wk 1.
+
+## Creating Functions
+1. Create a function that can be used to determine if Britney Spears sang the song. 
+2. Test your function on the billboard data. Save the results to a new column called "wasItBritney"
+
+## For loops
+1. Use a for loop to determine if a song placed 50 or below or placed above 50 during the first week. 
+2. Use an if else statement to determine the same information as you obtained with the for loop. 
+3. Compare your results. 
