@@ -1,0 +1,16 @@
+---
+title: 'R Base Code Assignment # 3'
+author: "Amanda Mae Woodward"
+date: "2022-10-06"
+output: html_document
+---
+## Creating Functions
+1. Create a function that can be used to determine if Britney Spears sang the song. 
+2. Test your function on the billboard data. Save the results to a new column called "wasItBritney"
+##
+1. Open the tidyverse library.
+2. open the billboard dataset
+## For loops
+1. Use a for loop to determine if a song placed 50 or below or placed above 50 during the first week. 
+2. Use an if else statement to determine the same information as you obtained with the for loop. 
+3. Compare your results. 
