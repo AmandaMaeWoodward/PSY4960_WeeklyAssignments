@@ -1,4 +1,6 @@
 ---
+---
+---
 title: "Base R- Weekly Assignment #2"
 author: "Amanda Mae Woodward"
 date: "2022-10-03"
@@ -6,13 +8,51 @@ output: html_document
 ---
 # Set Up
 1. Load the tidyverse library. 
+```{r}
+```
+
 2. Load the billboard data. 
+```{r}
+data("billboard")
+```
+
 3. What type of data is this? (e.g. describe what's in the dataset.)
+```{r}
+class(billboard$artist)
+class(billboard$track)
+class(billboard$date.entered)
+class(billboard$wk1)
+#there are characters/labels, date, and numeric in the data set
+```
+
 4. Print the column names from this dataset. 
+```{r}
+colnames(billboard)
+```
+
 5. Print the first 5 entries in the dataset. 
+```{r}
+billboard[5,]
+```
 
 # Practice
 1. Create a subset of data that has Jay-Z as the only artist. How many songs are in it?
+```{r}
+billboard %>% filter(artist=="Jay-Z")
+subset(billboard, billboard$artist== "Jay-Z")
+```
+
 2. In the original dataset, use filter to find information about the song "All the small things." What was the highest position this song reached on the billboard 100? 
+```{r}
+billboard %>% filter(track=="All The Small Things")
+## The highest position was 6##
+```
+
 3. Create a subset of data for songs Tim McGraw sang. Summarize the data for wk 1.
+```{r}
+subset(billboard, billboard$artist=="McGraw, Tim")
+
+summary(subset(billboard, billboard$artist=="McGraw, Tim", "wk1"))
+
+```
 
