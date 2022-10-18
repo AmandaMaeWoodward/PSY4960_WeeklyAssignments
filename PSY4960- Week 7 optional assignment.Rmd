@@ -17,3 +17,4 @@ For this assignment, we'll be practicing the dataset manipulation codes we learn
 2. Are these data in long or wide format? explain how you know
 3. Change this dataframe to the other format.
 4. mutate the income column so you have the median monthly income
+
