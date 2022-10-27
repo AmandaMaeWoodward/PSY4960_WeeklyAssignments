@@ -1,0 +1,22 @@
+---
+title: "Quiz 2"
+author: "Amanda Mae Woodward"
+date: "2022-10-27"
+output: html_document
+---
+This quiz will focus on data frame manipulation, however, you may need to rely on skills you've learned in prior weeks. 
+
+1. load the starwars dataset from tidyverse
+
+2. separate the films column so that there is one film in each column (don't worry about the "c(" and ) at the end for now)
+
+3. alter the data from wide data to long data
+
+4. in the column where you stored the films, rename the levels so each film name is consistent (e.g. get rid of the "c(" and ")" )
+
+5. Create a column in your dataset that indicates whether a character was in the first starwars film, *Star Wars Episode IV: A New Hope* 
+
+6. BMI is calculated as mass in Kg/height in meters. You currently have mass in Kg and height in cm. Create a column that contains each character's BMI. 
+
+7. create a dataframe that contains only the name, hair color, and eye color for each character. 
+
