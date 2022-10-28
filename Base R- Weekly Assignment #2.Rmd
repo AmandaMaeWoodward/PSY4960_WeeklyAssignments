@@ -9,23 +9,24 @@ output: html_document
 ```{r}
 library(tidyverse)
 ```
+#√
 2. Load the billboard data. 
 ```{r}
 data("billboard")
 ```
-
+#√
 3. What type of data is this? (e.g. describe what's in the dataset.)
 ```{r}
-via '?billboard'
+#via '?billboard'
 #the dataset contains song rankings for billboard songs top 100 in the year 2000
 
 summary(billboard)
 ```
-
+#√
 4. Print the column names from this dataset. 
 ```{r}
 colnames(billboard)
-
+#√
 ```
 
 5. Print the first 5 entries in the dataset. 
@@ -33,7 +34,7 @@ colnames(billboard)
 head(billboard,5)
 
 ```
-
+#√
 
 # Practice
 1. Create a subset of data that has Jay-Z as the only artist. How many songs are in it?
@@ -43,7 +44,7 @@ subset(billboard, billboard$artist=="Jay-Z")
 #the subset contains 5 songs
 
 ```
-
+#√
 2. In the original dataset, use filter to find information about the song "All the small things." What was the highest position this song reached on the billboard 100? 
 ```{r}
 billboard %>% filter(track== "All The Small Things")
@@ -54,12 +55,12 @@ summary(ATST_dat)
 #the highest position the song reached on charts was 6
 
 ```
-
+#√
 3. Create a subset of data for songs Tim McGraw sang. Summarize the data for wk 1.
 ```{r}
 
 subset(billboard, billboard$artist== "McGraw, Tim")
 McGraw_dat<- subset(billboard, billboard$artist== "McGraw, Tim")
 summary(McGraw_dat$wk1)
-
 ```
+#√
