@@ -5,13 +5,21 @@ date: "2022-10-03"
 output: html_document
 ---
 # Set Up
-1. Load the tidyverse library. 
-> library(tidyverse)
+1. Load the tidyverse library.
+```{r}
+library(tidyverse)
+```
+# please make sure that you use code chunks. Right now, you're copying output and I can't run it on my computer. 
+
 3. Load the billboard data. 
 > data(billboard)
 > force(billboard)
+#I'm not sure that force is the function you need
+
 5. What type of data is this? (e.g. describe what's in the dataset.)
 This data shows the billboard top 100 for weeks 1-47 between the years 1999-2000. They have the name of the artist, track, date entered, and then followed by each week and their placement in the billboard top 100 if they were within it that week.
+# your numbering is not correct 
+
 7. Print the column names from this dataset. 
 > colnames(billboard)
 9. Print the first 5 entries in the dataset. 
