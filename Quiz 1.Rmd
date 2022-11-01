@@ -9,28 +9,29 @@ This quiz will cover everything we've covered in Base R.
 ```{r}
 library(tidyverse)
 ```
+#√
 
 2. Open the starwars dataset.
 ```{r}
 data("starwars")
 ```
-
+#√
 3. Create a subset of data that contains only the humans from the starwars franchise.
 ```{r}
 subset(starwars, starwars$species == "Human")
 ```
-
+#√
 4. In this subset of data, who is the tallest character?
 ```{r}
 summary(subset(starwars, starwars$species == "Human"))
 starwars %>% filter(height==202.0)
 ```
-
+#√
 5. In this subset of data, print the information about the character in the third row. 
 ```{r}
 subset(starwars, starwars$species == "Human")[3,]
 ```
-
+#√
 6. In the full starwars dataset, calculate the average mass for the masculine characters. 
 ```{r}
 
@@ -38,27 +39,28 @@ SWMale<-subset(starwars, starwars$gender=="masculine")
 mean(SWMale$mass)
 summary(SWMale)
 ```
-
+#√
 7. Create a dataset that contains only the characters and the films that they appeared in from the full dataset.
 ```{r}
 cbind(name<-starwars$name, films<-starwars$films)
 ```
+#√- this works, but the assignments you are doing within the column aren't doing anything. currently, the columns have no name
 
 8. Create a new column in the starwars dataset that contains a "ranking" of all characters (Note: you don't have to actually rank them. Just fill the column in with the numbers 1-87)
 ```{r}
 starwars$rank<-1:87
 ```
-
+#√
 9. Create a subset of data for the characters from Naboo. How many characters are from Naboo? 
 ```{r}
 subset(starwars, starwars$homeworld == "Naboo")
 summary(subset(starwars, starwars$homeworld == "Naboo"))
 ##11 of them##
 ```
-
+#√
 10. How many droids are in the full dataset? 
 ```{r}
 subset(starwars, starwars$species== "Droid")
 ## 6 of them##
 ```
-
+#√
