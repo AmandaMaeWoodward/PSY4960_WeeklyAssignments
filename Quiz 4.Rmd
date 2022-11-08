@@ -1,0 +1,28 @@
+---
+title: "Quiz 4"
+author: "Amanda Mae Woodward"
+date: "2022-11-08"
+output: html_document
+---
+
+1. open the mtcars dataset.
+
+2. Find the correlation between mpg and hp.
+
+3. Create a scatterplot that matches your statistic in #2. 
+
+4. Find the correlation between am and mpg. Explain why you chose to use your specific function
+
+5. Run a regression to predict mpg from disp.
+
+6. Create a graph that displays your regression line. 
+
+7. Run a t test to compare the horse power of automatic and manual transmission cars. 
+
+8. Create a graph that accompanies your statistic in #6.
+
+9. Run an ANOVA to predict disp from gear. 
+
+10. You have a multiple choice test that is 25 questions with 5 potential options. What type of test can you run to determine if your score of 16/25 differs from chance? 
+
+11. Run the test you described in #10

@@ -1,0 +1,24 @@
+---
+title: "Weekly Assignment 10"
+author: "Amanda Mae Woodward"
+date: "2022-11-08"
+output: html_document
+---
+
+1. Open the diamonds dataset from ggplot2.   
+
+2. Run a correlation between the x and y variables. What do you notice? 
+
+3. What is the correlation between price and carat?
+
+4. Create a linear model predicting price from table. What is the coefficient for table? 
+
+5. Run a regression and an Anova predicting price from color. What do you notice about the two types of output? 
+
+6. Run a t test to determine if "D" color diamonds are more expensive than "E" color diamonds. 
+
+7. Open the warpbreaks dataset. What test would you use to determine the correlation between wool type and breaks?
+
+8. What is the correlation between wool type and breaks? 
+
+9. A student has a 35 question, multiple choice test. Each question has 4 choices. If they answered 17 questions correctly, did their responses differ from chance?  

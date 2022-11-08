@@ -7,12 +7,36 @@ output: html_document
 This quiz will focus on data frame manipulation, however, you may need to rely on skills you've learned in prior weeks. 
 
 1. load the starwars dataset from tidyverse
+```{r}
+library(tidyverse)
+data(starwars)
+```
 
 2. separate the films column so that there is one film in each column (don't worry about the "c(" and ) at the end for now)
+```{r}
+sepFilm<- starwars %>% separate(films, into= c("film1", "film2", "film3", "film4", "film5", "film6"), sep=",")
+```
+
+```{r}
+starwars$films<-as.character(starwars$films)
+filmsExpanded<-separate_rows(starwars, films, sep =",")
+filmsExpanded$films<-as.factor(filmsExpanded$films)
+levels(filmsExpanded$films)
+levels(filmsExpanded$films)<-c("A New Hope", "A New Hope", "Attack of the Clones", "Return of the Jedi", "Return of the Jedi", "Revenge of the Sith", "Revenge of the Sith", "The Force Awakens", "The Phantom Menace","The Phantom Menace","A New Hope", "Attack of the Clones", "Attack of the Clones","Return of the Jedi","Revenge of the Sith", "The Empire Strikes Back", "The Phantom Menace", "Return of the Jedi","Revenge of the Sith","The Empire Strikes Back", "The Force Awakens","The Phantom Menace")
+filmsExpanded<-pivot_wider(filmsExpanded, id_cols = c("name"    ,   "height"  ,   "mass"     ,  "hair_color" ,"skin_color" ,"eye_color"  ,"birth_year" ,"sex"      ,  "gender"  ,   "homeworld" , "species" ,    "vehicles"   ,"starships"    ), values_from = "films", names_from = "films" )
+```
+
 
 3. alter the data from wide data to long data
+```{r}
+sepFilmLon
+```
 
 4. in the column where you stored the films, rename the levels so each film name is consistent (e.g. get rid of the "c(" and ")" )
+```{r}
+dat$film<- as.factor(dat$filme)
+levels(dat$film)<- c(" ")
+```
 
 5. Create a column in your dataset that indicates whether a character was in the first starwars film, *Star Wars Episode IV: A New Hope* 
 
