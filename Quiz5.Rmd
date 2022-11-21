@@ -1,0 +1,175 @@
+---
+title: "PSY4960- Quiz 5"
+author: "Amanda Mae Woodward"
+date: "2022-11-21"
+output: html_document
+---
+
+For this assignment, you should fix the code below. Knit a copy and submit the knitted version via Canvas. 
+
+## Problem 1
+
+ggplot(mtcars, aes(hp, disp))+ geom_point +theme_classic()
+
+## Problem 2
+A student is trying to make a graph that shows a regression line for weight predicted by miles per gallon with this code: 
+
+```{r}
+ggplot(mtcars,aes(wt,mpg))+geom_point+geom_smooth(method)+theme_classic()+
+```
+
+## Problem 3
+
+```{r}
+data("diamonds")
+diamondsDE<-diamond %>% fillter(color=="D","E")
+```
+
+## Problem 4
+
+```{r}
+time<- seq(0:60, 5)
+light1<- c(0,.25,.75,2.5,3.25,5.5,5.25,8,8.88,9,9.5,9.75,9.75)
+light2<- c(0,0,0,0,0,0,0,0,.5,1.25,2,2.75,3.75,4.25)
+scientistDat<- cbind.data.frame(time,light1,light2)
+ggplot(scientistDat, aes(Light2,time)) + geom_bar() + Theme_bw()
+```
+
+## Problem 5
+
+```{r}
+lm1<- lm(light2~Time+light1)
+summary(lm1)
+```
+
+## Problem 6
+```{r}
+ggplot(mtcars, aes(hp, disp))
+```
+
+## Problem 7
+
+```{r}
+cwwide <- pivot_wider(ChickWeight, id_cols = c("chick", "diet"), names_from = "Time", values_from = "weight")
+```
+
+## Problem 8
+
+Compute the correlation between the transmission and mpg columns in the mtcars dataset.
+```{r}
+lm(mtcars$am, mtcars$mpg)
+```
+
+## Problem 9
+
+Color the graph using disp as a third variable. 
+```{r}
+ggplot(mtcars, aes(hp, mpg)) + geom_point(fill=disp)
+```
+
+## Problem 10
+
+```{r}
+vs2$mtcars< ifelse(mtcars$vs=0, autonomic, manual)
+```
+
+## Problem 11
+
+mlinearOne <- lm(mpg, disp+wt, data=mtcars)
+summary(mlinearOne)
+
+## Problem 12
+
+You volunteer at an animal shelter and play with 10 tabby cats. The veterinarian tells you that a tabby cat has a 25% chance of being born with hazel eyes. If 5 of the tabby cats you saw had hazel eyes, did this differ from chance?
+```{r}
+binom.test(5, 10, 25)
+```
+
+## Problem 13
+
+```{r}
+data("USArrests")
+summary(USArrests)
+
+USArrests$HighorLow<-NA
+for(1:nrow(USArrests)){
+  if(USArrests$Murder[i]>8){
+    USArrests$HighorLow[i]<-"high"}
+  else USArests$HighorLow[i]<-"low"
+  }
+```
+
+## Problem 14
+
+```{r}
+
+summary(diamonds$cut)
+recode(diamonds, 'Fair=1; Good=2; Very Good=3')
+```
+
+## Problem 15
+
+4. Open the starwars dataset. Run a summary function on those that are apart of the tatooine planet. Those from Tatooine, find how many characters have a birth year of exactly or over 50. Figure out how the fix the error(s): 
+```{r}
+data(starwars)
+Tatooine <- subset(starwars$homeworld=="Tatooine")
+summary(tatooine)
+TatOver50 <- Tatooine %>% select(birth_year <= 50)
+prow(TatOver50)
+```
+
+## Problem 16
+
+```{r}
+cor(cut, price, diamonds)
+biserial.cor(cut_data$color, cut_data$price)
+```
+
+first, you must set your seed to the same one I do.
+
+```{r}
+set.seed()
+```
+
+Now that we have the same seed, we need the data to sample from
+
+```{r}
+person <- c("one","two","three","four","five","six","seven","eight","nine","ten")
+favorite_number <- sample(1:1000000, 10, replace = TRUE)
+animal <- c("cat","dog","axolotl")
+persons_animal <- sample(animal, 10, replace = TRUE)
+```
+
+```{r}
+make that a data set!
+
+
+the Data Set <- cbind.data.frame(person, favorite_number, persons_animal)
+```
+
+
+## Problem 18
+
+```{r}
+meanSdDev<- function(col1, col2){
+  meancol1 / sdcol2
+}
+```
+
+## Problem 19
+
+Chickweight %>% select(weight=50)
+
+## Problem 20
+```{r}
+data("billboard")
+billboardLong <- pivot_wider(billboard, cols = c(colnames(billboard[4:79])), names_to = "rankings", values_to = "weeks")
+britney <- billboardLong %>% filter(artist == "Spears, Britney") %>% na.omit(rankings)
+nrow(britney$rankings)
+```
+
+## Problem 21
+Create a boxplot for price for the different carats
+```{r}
+ggplot(ChickWeight, aes(price, carat))+ geom_line()
+```
